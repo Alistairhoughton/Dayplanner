@@ -61,7 +61,7 @@ textarea {
   border: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #d50667;
+  background-color: #1f9da7;
   color: white;
   min-width: 5vw;
   font-size: 30px;
@@ -98,13 +98,21 @@ textarea {
   
 }
 
-.eventText {
+#eventText, #eventText2 {
   min-width: 80vw;
-  background-color: rgb(187, 184, 184);
+  /* background-color: rgb(187, 184, 184); */
   border: none;
 }
 
+.currentTime {
+  background-color: rgb(218, 53, 108);
+}
 
+.pastTime {
+  background-color: grey;
+}
 
-
+.futureTime {
+  background-color: green;
+}
 
