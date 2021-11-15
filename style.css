@@ -98,8 +98,8 @@ textarea {
   
 }
 
-#eventText, #eventText2 {
-  min-width: 80vw;
+.text-area {
+  min-width: 60vw;
   /* background-color: rgb(187, 184, 184); */
   border: none;
 }
