@@ -68,8 +68,8 @@ textarea {
 }
 
 .saveBtn:hover {
-  background-color: #1e55ca;
-  font-size: 20px;
+  background-color: #27bd6b;
+  font-size: 40px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -115,4 +115,5 @@ textarea {
 .futureTime {
   background-color: green;
 }
+
 

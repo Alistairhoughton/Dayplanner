@@ -29,8 +29,6 @@ var currentHour = moment().hour();
 
 $(timeValue).each (function() {
 currentHour == currentTime
-})
-
 if (currentHour == currentTime){
     inputArea.classList.add('currentTime');
 }
@@ -40,6 +38,8 @@ else if (currentHour < currentTime) {
 else {
     inputArea.classList.add('pastTime');
 }
+})
+
 
 
 // if (trueTimeValue == currentTime){
