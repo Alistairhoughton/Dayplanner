@@ -2,7 +2,7 @@ const currentDay = document.getElementById('currentDay')
 const m = moment();
 // const timerContainerValue = document.querySelector(timer-container);
 var currentTime = m.format("hh");
-var timeValue = document.querySelector('.timeValue');
+var timeValue = document.querySelectorAll('.timeValue');
 
 console.log('timeValue');
 
@@ -29,6 +29,7 @@ var currentHour = moment().hour();
 
 $(timeValue).each (function() {
 currentHour == currentTime
+
 if (currentHour == currentTime){
     inputArea.classList.add('currentTime');
 }
