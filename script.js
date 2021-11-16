@@ -1,14 +1,18 @@
 const currentDay = document.getElementById('currentDay')
 const m = moment();
-// const timeValue = document.getElementById('timer-container');
+// const timerContainerValue = document.querySelector(timer-container);
 var currentTime = m.format("hh");
-var timeValue = document.getElementById('timeValue').innerHTML;
-var inputArea = document.querySelector("text-area");
-// var trueTimeValue = timeValue.innerHTML;
+var timeValue = document.querySelector('.timeValue');
+
+console.log('timeValue');
+
+var inputArea = document.querySelector(".text-area");
+var trueTimeValue = timeValue.innerHTML;
 
 // ====================================================================
 
-// console.log(currentTime);
+console.log(currentTime);
+console.log(trueTimeValue);
 
 //time variable 
 
@@ -23,29 +27,24 @@ var inputArea = document.querySelector("text-area");
 
 var currentHour = moment().hour();
 
-function timeCheck() {
-    
-    $(timeValue).each (function() {
-        // currentHour == currentTime
-        
-        if (currentHour == timeValue){
+
+function timeCheck() {  
+$(timeValue).each (function() {
+currentHour == currentTime
+        if (currentHour == currentTime){
             inputArea.classList.add('currentTime');
         }
-        else if (currentHour < timeValue) {
+        else if (currentHour < currentTime) {
             inputArea.classList.add('futureTime');
         }
         else {
             inputArea.classList.add('pastTime');
         }
     })
-    
 }
 
 timeCheck()
 
-
-console.log(timeValue);
-console.log(currentHour);
 
 // if (trueTimeValue == currentTime){
 //     inputArea.classList.add('currentTime');
@@ -75,4 +74,3 @@ localStorage.setItem(timeText, textInput);
 
 
 });
-

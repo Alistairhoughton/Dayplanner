@@ -68,7 +68,7 @@ textarea {
 }
 
 .saveBtn:hover {
-  background-color: #27bd6b;
+  background-color: #0bb460;
   font-size: 40px;
   transition: all 0.3s ease-in-out;
 }
@@ -102,7 +102,6 @@ textarea {
   min-width: 60vw;
   /* background-color: rgb(187, 184, 184); */
   border: none;
-  height: 200px
 }
 
 .currentTime {
@@ -116,5 +115,3 @@ textarea {
 .futureTime {
   background-color: green;
 }
-
-
