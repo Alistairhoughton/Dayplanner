@@ -100,18 +100,24 @@ textarea {
 
 .text-area {
   min-width: 60vw;
-  /* background-color: rgb(187, 184, 184); */
   border: none;
 }
 
 .currentTime {
   background-color: rgb(218, 53, 108);
+  min-width: 60vw;
+  border: none;
 }
+
 
 .pastTime {
   background-color: grey;
+  min-width: 60vw;
+  border: none;
 }
 
 .futureTime {
   background-color: green;
+  min-width: 60vw;
+  border: none;
 }

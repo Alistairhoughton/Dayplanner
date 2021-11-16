@@ -1,18 +1,24 @@
 const currentDay = document.getElementById('currentDay')
 const m = moment();
+var inputArea = document.querySelectorAll(".text-area");
+var currentHour = moment().hour();
+var currentTime = m.format("HH");
+// var trueTimeValue = timeValue.innerHTML;
+// var timeValue = document.getElementById('timeValue')
+
+
+// var timeValue = document.querySelector('.timeValue');
+
 // const timerContainerValue = document.querySelector(timer-container);
-var currentTime = m.format("hh");
-var timeValue = document.querySelector('.timeValue');
+// console.log('timeValue', timeValue);
 
-console.log('timeValue');
 
-var inputArea = document.querySelector(".text-area");
-var trueTimeValue = timeValue.innerHTML;
+
 
 // ====================================================================
 
-console.log(currentTime);
-console.log(trueTimeValue);
+// console.log(currentTime);
+// console.log(trueTimeValue);
 
 //time variable 
 
@@ -25,22 +31,41 @@ console.log(trueTimeValue);
 
 // need a var of current hour which is moment().hour(). For each function, 
 
-var currentHour = moment().hour();
 
 
 function timeCheck() {  
-$(timeValue).each (function() {
-currentHour == currentTime
-        if (currentHour == currentTime){
-            inputArea.classList.add('currentTime');
-        }
-        else if (currentHour < currentTime) {
-            inputArea.classList.add('futureTime');
-        }
-        else {
-            inputArea.classList.add('pastTime');
-        }
-    })
+// $('#text-area-class').each (function() {
+const textAreaCollection = document.querySelectorAll('#text-area-class');
+
+textAreaCollection.forEach(element => {
+    if (currentHour == currentTime){
+                    element.classList.add('currentTime');
+                    element.classList.remove('pastTime');
+                }
+                else if (currentHour < currentTime) {
+                    element.classList.add('futureTime');
+                    element.classList.remove('currentTime');
+                }
+                else {
+                    element.classList.add('pastTime');
+                    element.classList.remove('futuretime')
+                }
+});
+// console.log('#text-area-class');
+
+//         if (currentHour == currentTime){
+//             inputArea.classList.add('currentTime');
+//         }
+//         else if (currentHour < currentTime) {
+//             inputArea.classList.add('futureTime');
+//         }
+//         else {
+//             inputArea.classList.add('pastTime');
+//         }
+//     })
+console.log('current hour', currentHour);
+console.log('current time', currentTime);
+
 }
 
 timeCheck()
