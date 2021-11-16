@@ -3,9 +3,6 @@ const m = moment();
 // const timerContainerValue = document.querySelector(timer-container);
 var currentTime = m.format("hh");
 var timeValue = document.querySelectorAll('.timeValue');
-
-console.log('timeValue');
-
 var inputArea = document.querySelector(".text-area");
 var trueTimeValue = timeValue.innerHTML;
 
