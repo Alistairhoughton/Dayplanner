@@ -102,6 +102,7 @@ textarea {
   min-width: 60vw;
   /* background-color: rgb(187, 184, 184); */
   border: none;
+  height: 200px
 }
 
 .currentTime {
