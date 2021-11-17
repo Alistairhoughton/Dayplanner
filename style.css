@@ -27,7 +27,7 @@ textarea {
 
 .time-block {
   text-align: center;
-  border-radius: 15px;
+  
 }
 
 .row {
@@ -98,18 +98,16 @@ textarea {
   
 }
 
-textarea {
+.text-area {
   min-width: 60vw;
   border: none;
-  border-radius: 15px;
-  background-color: transparent;
 }
 
 .currentTime {
   background-color: rgb(218, 53, 108);
   min-width: 60vw;
   border: none;
-  border-radius: 15px;
+  
 }
 
 
@@ -117,12 +115,12 @@ textarea {
   background-color: grey;
   min-width: 60vw;
   border: none;
-  border-radius: 15px;
+  
 }
 
 .futureTime {
   background-color: green;
   min-width: 60vw;
   border: none;
-  border-radius: 15px;
+  
 }
