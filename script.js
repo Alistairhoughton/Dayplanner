@@ -1,5 +1,5 @@
-var storedData = localStorage.getItem('time, textInput');
-
+// var storedData = localStorage.getItem('time, textInput');
+var storedData = localStorage.getItem('userText');
 
 const currentDay = document.getElementById('currentDay');
 var timeValue = document.querySelector('.timeValue');
@@ -48,13 +48,13 @@ $('.saveBtn').on('click',function() {
 var textInput = $(this).siblings('.text-area').val();
 var timeText = $(this).parent().attr('id');
 
-console.log('textInput ',textInput);
-console.log('time ',timeText);
+// console.log('textInput ',textInput);
+// console.log('time ',timeText);
+// localStorage.setItem(timeText, textInput);
 
-localStorage.setItem('time', timeText);
-localStorage.setItem('todo;', textInput);
+localStorage.setItem('userText', textInput);
 
-localStorage.setItem(timeText, textInput);
+
 });
 
 
