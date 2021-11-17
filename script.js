@@ -1,39 +1,100 @@
+localStorage.getItem('textInput');
+
 const currentDay = document.getElementById('currentDay')
-const m = moment();
 var inputArea = document.querySelectorAll(".text-area");
-var currentHour = moment().hour();
-var currentTime = m.format("HH");
+var timeCard = document.querySelectorAll(".timecard")
 var timeValue = document.querySelector('.timeValue')
-var trueTimeValue = timeValue.innerHTML;
+const m = moment();
+// var currentHour = moment().hour();
+var currentTime = m.format("H");
+// var trueTimeValue = timeValue.innerHTML;
+
+// var nineAM = document.getElementById('9')
+// var tenAM = document.getElementById('10')
+// var elevenAM = document.getElementById('11')
+// var twelvePM = document.getElementById('12')
+// var onePM = document.getElementById('13')
+// var twoPM = document.getElementById('14')
+// var threePM = document.getElementById('15')
+// var fourPM = document.getElementById('16')
+// var fivePM = document.getElementById('17')
 
 // vars ==================================================================================
 
-function timeCheck() {  
-    const textAreaCollection = document.querySelectorAll('#text-area-class');
+currentDay.textContent = m.format('MMMM Do YYYY, h:mm:ss a');
+
+//set the time at the top of the page =====================================================
+
+
+
+// function timeCheck() {  
+//     const textAreaCollection = document.querySelectorAll('#text-area-class');
     
-    textAreaCollection.forEach(element => {
-        if (currentTime== trueTimeValue){
-            element.classList.add('currentTime');
-            element.classList.remove('pastTime');
-        }
-        else if (currentTime > trueTimeValue) {
-            element.classList.add('futureTime');
-            element.classList.remove('currentTime');
-        }
-        else {
-            element.classList.add('pastTime');
-            element.classList.remove('futuretime')
-        }
-    });
+//     textAreaCollection.forEach(element => {
+//         if (currentHour== trueTimeValue){
+//             element.classList.add('currentTime');
+            
+//         }
+//         else if (currentHour > trueTimeValue){
+//             element.classList.add('futureTime');
+            
+//         }
+//         else {
+//             element.classList.add('pastTime');
+            
+//         }
+//     });
+// }
+
+// timeCheck()
+
+// timecard loop ============================================================================
+
+// function timeCheck() {  
+//     const textAreaCollection = document.querySelectorAll('#text-area-class');
+    
+//     textAreaCollection.forEach(element => {
+//         if (currentHour== trueTimeValue){
+//             element.classList.add('currentTime');
+            
+//         }
+//         else if (currentHour > trueTimeValue){
+//             element.classList.add('futureTime');
+            
+//         }
+//         else {
+//             element.classList.add('pastTime');
+            
+//         }
+//     });
+// }
+
+// timeCheck()
+
+// ========================================================================================
+
+//  alternate function
+
+var backGroundColour = function(){
+    for (var i = 9; i < 18; i++) {
+        if (i < currentTime)
+            document.getElementById(i).classList.add("pastTime")
+        else if (i == currentTime)
+            document.getElementById(i).classList.add("currentTime")
+        else if (i > currentTime)
+            document.getElementById(i).classList.add("futureTime")
+    }
 }
 
-timeCheck()
+backGroundColour()
 
-console.log('current hour', currentHour);
-console.log('current time', currentTime);
-console.log('truetimevalue', trueTimeValue);
 
-currentDay.textContent = m.format('MMMM Do YYYY, h:mm:ss a');
+// ====================================================================================
+
+
+// console.log('current hour', currentHour);
+// console.log('current time', currentTime);
+// console.log('truetimevalue', trueTimeValue);
 
 // save function ====================================================================
 
@@ -42,7 +103,7 @@ $('.saveBtn').on('click',function() {
 var textInput = $(this).siblings('.text-area').val();
 var timeText = $(this).parent().attr('id');
 
-console.log('textinput ',textInput);
+console.log('textInput ',textInput);
 console.log('time ',timeText);
 
 localStorage.setItem(timeText, textInput);
@@ -50,6 +111,7 @@ localStorage.setItem(timeText, textInput);
 
 
 });
+
 
 
 // var currentHour = '10'
