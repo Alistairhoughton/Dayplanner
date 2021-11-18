@@ -2,11 +2,11 @@ var storedData = localStorage.getItem('storedText');
 
 function getFromStorage () {
 
-    const dataRecords = document.querySelectorAll('#div');
+    const dataRecords = document.querySelectorAll('.timecard');
 
     dataRecords.forEach(element => {
     var storedText  = element.dataset.id
-    localStorage.getItem('storedText', storedText)
+    
 });
 }
 
