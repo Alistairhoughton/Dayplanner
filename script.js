@@ -1,5 +1,19 @@
-// var storedData = localStorage.getItem('time, textInput');
-var storedData = localStorage.getItem('userText');
+var storedData = localStorage.getItem('storedText');
+
+function getFromStorage () {
+
+    const dataRecords = document.querySelectorAll('#div');
+
+    dataRecords.forEach(element => {
+    var storedText  = element.dataset.id
+    localStorage.getItem('storedText', storedText)
+});
+}
+
+getFromStorage()
+
+
+// ================================================================================================
 
 const currentDay = document.getElementById('currentDay');
 var timeValue = document.querySelector('.timeValue');
@@ -22,7 +36,7 @@ function timeCheck() {
         var blockTime = element.id;
         var inputArea = element.querySelector('.text-area');
         
-
+        
         if (userHour == blockTime){
             inputArea.classList.add('currentTime');
             
@@ -47,14 +61,11 @@ $('.saveBtn').on('click',function() {
 
 var textInput = $(this).siblings('.text-area').val();
 var timeText = $(this).parent().attr('id');
-
 // console.log('textInput ',textInput);
 // console.log('time ',timeText);
-// localStorage.setItem(timeText, textInput);
-
-localStorage.setItem('userText', textInput);
-
-
+localStorage.setItem(timeText, textInput);
 });
 
+
+// =============================================================================================
 
