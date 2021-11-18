@@ -1,17 +1,29 @@
-var storedData = localStorage.getItem('storedText');
+// var storedData = localStorage.getItem('storedText');
 
-function getFromStorage () {
+// function getFromStorage () {
 
-    const dataRecords = document.querySelectorAll('.timecard');
+//     const dataRecords = document.querySelectorAll('.timecard');
 
-    dataRecords.forEach(element => {
-    var storedText  = element.dataset.id
+//     dataRecords.forEach(element => {
+//     var storedText  = element.dataset.id
     
-});
-}
+// });
+// }
 
-getFromStorage()
+// getFromStorage()
 
+// ==================================================================================================
+
+function getFromStorage() {
+    const dataRecords = document.querySelectorAll('.timecard');
+    dataRecords.forEach((element) => {
+      var id = element.dataset.id;
+      var text = localStorage.getItem(id);
+      element.children[1].textContent = text;
+    });
+  }
+
+  getFromStorage()
 
 // ================================================================================================
 
@@ -57,14 +69,14 @@ timeCheck()
 // ========================================================================================
 // save function ====================================================================
 
-$('.saveBtn').on('click',function() {
+$('.saveBtn').on('click', function () {
+    var textInput = $(this).siblings('.text-area').val();
+    var timeText = $(this).parent().data('id');
+    // console.log('textInput ',textInput);
+    // console.log('time ',timeText);
+    localStorage.setItem(timeText, textInput);
+  });
 
-var textInput = $(this).siblings('.text-area').val();
-var timeText = $(this).parent().attr('id');
-// console.log('textInput ',textInput);
-// console.log('time ',timeText);
-localStorage.setItem(timeText, textInput);
-});
 
 
 // =============================================================================================
