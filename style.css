@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -15,7 +15,7 @@ textarea {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: #d6d6d6;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -27,7 +27,6 @@ textarea {
 
 .time-block {
   text-align: center;
-  
 }
 
 .row {
@@ -95,7 +94,6 @@ textarea {
   align-items: center;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
-  
 }
 
 .text-area {
@@ -107,20 +105,46 @@ textarea {
   background-color: rgb(218, 53, 108);
   min-width: 60vw;
   border: none;
-  
 }
-
 
 .pastTime {
   background-color: grey;
   min-width: 60vw;
   border: none;
-  
 }
 
 .futureTime {
   background-color: green;
   min-width: 60vw;
   border: none;
-  
+}
+
+.clearcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  background-color: #d6d6d6;
+  border-top: black solid 8px;
+  width: 100vw;
+  margin-top: 10px;
+}
+
+.clearbtn {
+  background-color: rgb(235, 89, 69);
+  color: white;
+  border-style: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin: 20px;
+  width: 1200px;
+  height: 50px;
+  transition: ease-in-out;
+}
+
+.clearbtn:hover {
+  background-color: rgb(221, 177, 32);
+  transform: scale(110%);
+  transition: ease-in-out 0.3s;
 }
